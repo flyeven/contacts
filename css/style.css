@@ -39,7 +39,7 @@ button:hover {
 	border: 1px solid #DDD;
 }
 
-#book {
+#list {
 	margin-bottom: 10px;
 	border: 1px solid #DDD;
 	height: 200px;
@@ -49,20 +49,28 @@ button:hover {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color: #FFF;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
 }
-#book .clickable {
+#list.bigView {
+    height: 800px !important;
+}
+#list .selectable {
 	cursor: pointer;
 }
-#book .entry {
+#list .entry {
 	padding: 5px;
 }
-#book .entry span {
+#list .entry span {
 	font-weight: 700 !important;
 }
-#book .clickable:hover {
+#list .selectable:hover {
 	background-color: rgba(138, 8, 8, 0.05);
 }
-#book .clickable.selected {
+#list .selectable.selected {
 	background-color: #8A0808;
 	color: #FFF;
 }

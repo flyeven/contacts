@@ -1,0 +1,29 @@
+<div id="page" ng-show="contactModel.isAnySelected()">
+    <div id="toolbar" class="pull-right">
+        <button ng-hide="editMode" ng-click="startEdit(contactModel.selected)">Edit</button>
+        <button ng-show="editMode" ng-click="save()">Save</button>
+        <button ng-show="editMode" ng-click="cancel()">Cancel</button>
+        <button>Delete</button>
+    </div>
+    <form name="edit-details" novalidate ng-submit="edit-contact.$valid && save()">
+        <h1 ng-hide="editMode">{{ contactModel.selected.firstName }} <span class="bold">{{ contactModel.selected.lastName }}</span>
+            <span class="subtitle" ng-show="contactModel.selected.subtitle">{{ contactModel.selected.subtitle }}</span>
+        </h1>
+
+        <div ng-show="editMode">
+            <input id="form-firstName" placeholder="First Name" ng-model="contactModel.selected.firstName"/>
+            <input id="form-lastName" placeholder="Last Name" ng-model="contactModel.selected.lastName"/>
+            <input id="form-subtitle" placeholder="Subtitle" ng-model="contactModel.selected.subtitle"/>
+        </div>
+        <div id="tabs" ng-controller="TabsController">
+            <tabset>
+                <tab heading="Address">
+                    Address stuff
+                </tab>
+                <tab heading="Notes">
+                    Notes about this guy
+                </tab>
+            </tabset>
+        </div>
+    </form>
+</div>

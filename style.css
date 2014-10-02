@@ -1,0 +1,120 @@
+body {
+	background-color: #F2F2F2 !important;
+	background-image: url(https://github.com/TimoSta/Stud.IP-revised/raw/master/resources/background.png) !important;
+	background-repeat: repeat, no-repeat !important;
+	font-family: Lato, Arial !important;
+	padding: 15px;
+	font-weight: 400;
+}
+
+h1 span.bold {
+	font-weight: 700 !important;
+}
+h1 span.subtitle {
+	font-family: Cardo, serif;
+	font-size: 22px;
+	font-style: italic;
+}
+
+button {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #DDD;
+	background-color: #FFF;
+	padding: 5px;
+}
+button:hover {
+	border: 1px solid #8A0808;
+}
+
+.nav, .pagination, .carousel, .panel-title a , .alert { cursor: pointer; }
+
+#search form input {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	width: 100%;
+	background-color: #FFF;
+	margin-bottom: 5px;
+	border: 1px solid #DDD;
+}
+
+#book {
+	margin-bottom: 10px;
+	border: 1px solid #DDD;
+	height: 200px;
+	overflow-y:scroll;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #FFF;
+}
+#book .clickable {
+	cursor: pointer;
+}
+#book .entry {
+	padding: 5px;
+}
+#book .entry span {
+	font-weight: 700 !important;
+}
+#book .clickable:hover {
+	background-color: rgba(138, 8, 8, 0.05);
+}
+#book .clickable.selected {
+	background-color: #8A0808;
+	color: #FFF;
+}
+
+#messages {
+	margin-bottom: 10px;
+}
+#messages .alert {
+	padding: 5px;
+	margin-bottom: 5px;
+}
+#messages .alert button.close {
+	right: 0px;
+}
+
+#page {
+	
+	
+}
+
+#page input {
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: #FFF;
+	margin-bottom: 5px;
+	border: 1px solid #DDD;
+}
+
+#page input#form-firstName, #page input#form-lastName {
+	font-family: Lato;
+	font-size: 36px;
+	width: 20%
+}
+#page input#form-lastName {
+	font-weight: 700;
+}
+
+#page input#form-subtitle {
+	font-family: Cardo, serif;
+	font-size: 22px;
+	font-style: italic;
+	width: 30%;
+}
+
+#tabs {
+
+}
+
+#tabs .tab-content {
+	background-color: #FFF;
+	padding: 5px;
+	border: 1px solid #DDD;
+	border-top: none;
+}

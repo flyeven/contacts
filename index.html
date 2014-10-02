@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html ng-app="contacts">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+		<link href='http://fonts.googleapis.com/css?family=Lato|Cardo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	</head>
+	<body ng-controller="AppController as app">
+		<script type="text/javascript" src="lib/angular.min.js"></script>
+		<script type="text/javascript" src="lib/ui-bootstrap-tpls-0.11.2.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<div ng-controller="ListController as list">
+			<div id="search">
+				<form novalidate>
+					<input type="text" ng-model="list.searchTerm.$" placeholder="Search..." />
+				</form>
+			</div>
+					
+			<div id="book">
+				<div class="entry clickable" ng-repeat="contact in filteredContacts = (contactsModel.contacts | filter:list.searchTerm | orderBy:['lastName','firstName']:reverse)" ng-click="contactsModel.select(contact.id)" ng-class="{selected: contactsModel.isSelected(contact.id)}">
+					{{contact.firstName}} <span>{{contact.lastName}}</span>
+				</div>
+				<div class="entry" ng-hide="filteredContacts.length">
+					No entries found.
+				</div>
+			</div>
+		</div>
+		
+		<div id="messages" ng-controller="MessageController">
+		  <alert ng-repeat="alert in alerts" type="{{alert.type}}" ng-click="closeAlert($index)" close="closeAlert($index)">{{alert.msg}}</alert>
+		</div>
+		
+		<div id="page" ng-controller="DetailsController as details" ng-show="contactsModel.selectionMade()">
+			<div id="toolbar" class="pull-right">
+				<button ng-hide="details.editMode" ng-click="details.startEdit(app.selected)">Edit</button>
+				<button ng-show="details.editMode" ng-click="details.save()">Save</button>
+				<button ng-show="details.editMode" ng-click="details.cancel()">Cancel</button>
+				<button>Delete</button>
+			</div>
+			<form name="edit-details" novalidate ng-submit="edit-contact.$valid && details.save()">
+				<h1 ng-hide="details.editMode">{{ contactsModel.selected.firstName }} <span class="bold">{{ contactsModel.selected.lastName }}</span> <span class="subtitle" ng-show="contactsModel.selected.subtitle">{{ contactsModel.selected.subtitle }}</span></h1>
+				<div ng-show="details.editMode">
+					<input id="form-firstName" placeholder="First Name" ng-model="contactsModel.selected.firstName" />
+					<input id="form-lastName" placeholder="Last Name" ng-model="contactsModel.selected.lastName" />
+					<input id="form-subtitle" placeholder="Subtitle" ng-model="contactsModel.selected.subtitle" />
+				</div>
+				<div id="tabs" ng-controller="TabsController">
+					<tabset>
+						<tab heading="Address">
+							Address stuff
+						</tab>
+						<tab heading="Notes">
+							Notes about this guy
+						</tab>
+					</tabset>
+				</div>	
+			</form>
+		</div>
+	</body>
+</html>

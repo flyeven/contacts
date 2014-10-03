@@ -17,24 +17,29 @@
 <script type="text/javascript" src="module/detail.js"></script>
 <script type="text/javascript" src="module/user.js"></script>
 <script type="text/javascript" src="module/footer.js"></script>
+<script type="text/javascript" src="module/menu.js"></script>
 <script type="text/javascript" src="app.js"></script>
 
 <sign-in ng-hide="userModel.signedIn"></sign-in>
 
 <div id="main" ng-show="userModel.signedIn">
+    <div id="sidebar">
+        <menubar></menubar>
+        <contact-list></contact-list>
+        <add-contact></add-contact>
+    </div>
+    <div id="content">
+        <contact-messages></contact-messages>
 
-    <contact-messages></contact-messages>
+        <toolbar></toolbar>
 
-    <toolbar></toolbar>
+        <contact-details></contact-details>
 
-    <contact-search></contact-search>
-    <contact-list></contact-list>
-
-    <contact-details></contact-details>
-
+        <footer></footer>
+    </div>
 </div>
 
-<footer></footer>
+
 
 </body>
 </html>

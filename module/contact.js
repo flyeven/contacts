@@ -2,18 +2,25 @@
     var app = angular.module("contact", []);
 
     app.service('ContactModel', ['$http', 'MessageService', function ($http, messageService) {
-        var _this = this;
-
         this.contacts = [];
         this.searchTerm = null;
 
-
-        $http.get("mock.json").success(function (data) {
-            _this.contacts = data;
-        }).error(function (data, status, header, config) {
-            messageService.add("danger", "An error occured while loading your contacts.");
-        });
         this.selected = null;
+
+        this.loadData = function(data, refScope) {
+            var entries = data.feed.entry;
+            for(var i = 0; i < entries.length; i++) {
+                var entry = entries[i];
+                this.contacts.push({
+                    id: entry.id.$t,
+                    firstName: "",
+                    lastName: entry.title.$t
+                });
+            };
+            refScope.$apply(function () {
+                
+            });
+        };
 
         this.isSelected = function (id) {
             return !(this.selected === null) && this.selected.id === id;

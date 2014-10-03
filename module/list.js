@@ -12,4 +12,16 @@
             controllerAs: 'list'
         };
     });
+
+    app.directive('addContact', function () {
+        return {
+            restrict: "E",
+            templateUrl: "template/add.html",
+            controller: ['$scope', function ($scope) {
+                $scope.add = function() {
+                    // TODO
+                };
+            }]
+        };
+    });
 })();

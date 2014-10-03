@@ -1,119 +1,155 @@
 body {
-	background-color: #F2F2F2 !important;
-	background-image: url(https://github.com/TimoSta/Stud.IP-revised/raw/master/resources/background.png) !important;
-	background-repeat: repeat, no-repeat !important;
-	font-family: Lato, Arial !important;
-	padding: 15px;
-	font-weight: 400;
+    background-color: #F2F2F2 !important;
+    /*background-image: url(https://github.com/TimoSta/Stud.IP-revised/raw/master/resources/background.png) !important;
+    background-repeat: repeat, no-repeat !important;*/
+    background-image: url(../img/beach.png) !important;
+    background-size: auto;
+    background-repeat: no-repeat;
+    font-family: Lato, Arial !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 400;
+}
+
+h1 {
+    margin: 0px;
+    margin-bottom: 10px;
 }
 
 h1 span.bold {
-	font-weight: 700 !important;
+    font-weight: 700 !important;
 }
+
 h1 span.subtitle {
-	font-family: Cardo, serif;
-	font-size: 22px;
-	font-style: italic;
+    font-family: Cardo, serif;
+    font-size: 22px;
+    font-style: italic;
 }
 
 button {
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	border: 1px solid #DDD;
-	background-color: #FFF;
-	padding: 5px;
-}
-button:hover {
-	border: 1px solid #8A0808;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    background-color: #FFF;
+    padding: 5px;
 }
 
-.nav, .pagination, .carousel, .panel-title a , .alert { cursor: pointer; }
+button:hover {
+    border: 1px solid #8A0808;
+}
+
+.nav, .pagination, .carousel, .panel-title a, .alert {
+    cursor: pointer;
+}
 
 #search form input {
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding: 5px;
-	width: 100%;
-	background-color: #FFF;
-	margin-bottom: 5px;
-	border: 1px solid #DDD;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 10%;
+    min-width: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    border: 1px solid #DDD;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+
+#search form input:focus {
+    width: 100%;
+    background-color: #FFF;
 }
 
 #list {
-	margin-bottom: 10px;
-	border: 1px solid #DDD;
-	height: 200px;
-	overflow-y:scroll;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	background-color: #FFF;
+    margin-bottom: 10px;
+    border: 1px solid #DDD;
+    height: 200px;
+    overflow-y: scroll;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     -ms-transition: height 0.3s;
     -o-transition: height 0.3s;
     transition: height 0.3s;
 }
+
 #list.bigView {
     height: 800px !important;
 }
+
 #list .selectable {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 #list .entry {
-	padding: 5px;
+    padding: 5px;
 }
+
 #list .entry span {
-	font-weight: 700 !important;
+    font-weight: 700 !important;
 }
+
 #list .selectable:hover {
-	background-color: rgba(138, 8, 8, 0.05);
+    background-color: rgba(138, 8, 8, 0.05);
 }
+
 #list .selectable.selected {
-	background-color: #8A0808;
-	color: #FFF;
+    background-color: #8A0808;
+    color: #FFF;
 }
 
 #messages {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
+
 #messages .alert {
-	padding: 5px;
-	margin-bottom: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
 }
+
 #messages .alert button.close {
-	right: 0px;
+    right: 0px;
 }
 
 #page {
-	
-	
+    background-color: rgba(255, 255, 255, 0.8);
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 15px;
 }
 
 #page input {
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding: 5px;
-	background-color: #FFF;
-	margin-bottom: 5px;
-	border: 1px solid #DDD;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FFF;
+    margin-bottom: 5px;
+    border: 1px solid #DDD;
 }
 
 #page input#form-firstName, #page input#form-lastName {
-	font-family: Lato;
-	font-size: 36px;
-	width: 20%
+    font-family: Lato;
+    font-size: 36px;
+    width: 20%
 }
+
 #page input#form-lastName {
-	font-weight: 700;
+    font-weight: 700;
 }
 
 #page input#form-subtitle {
-	font-family: Cardo, serif;
-	font-size: 22px;
-	font-style: italic;
-	width: 30%;
+    font-family: Cardo, serif;
+    font-size: 22px;
+    font-style: italic;
+    width: 30%;
 }
 
 #tabs {
@@ -121,8 +157,53 @@ button:hover {
 }
 
 #tabs .tab-content {
-	background-color: #FFF;
-	padding: 5px;
-	border: 1px solid #DDD;
-	border-top: none;
+    background-color: #FFF;
+    padding: 5px;
+    border: 1px solid #DDD;
+    border-top: none;
+}
+
+#signInWindow {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #DDD;
+    width: 20%;
+    min-width: 350px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+#signInWindow h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+#footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #FFF;
+    text-align: center;
+}
+
+#footer a {
+    color: #FFF;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0);
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, .3);
 }

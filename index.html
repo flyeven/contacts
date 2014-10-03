@@ -9,17 +9,32 @@
 <body ng-controller="AppController as app">
 <script type="text/javascript" src="lib/angular.min.js"></script>
 <script type="text/javascript" src="lib/ui-bootstrap-tpls-0.11.2.min.js"></script>
+<script type="text/javascript" src="lib/google-plus-signin.js"></script>
 <script type="text/javascript" src="module/message.js"></script>
 <script type="text/javascript" src="module/contact.js"></script>
+<script type="text/javascript" src="module/search.js"></script>
 <script type="text/javascript" src="module/list.js"></script>
 <script type="text/javascript" src="module/detail.js"></script>
+<script type="text/javascript" src="module/user.js"></script>
+<script type="text/javascript" src="module/footer.js"></script>
 <script type="text/javascript" src="app.js"></script>
 
-<contact-list></contact-list>
+<sign-in ng-hide="userModel.signedIn"></sign-in>
 
-<contact-messages></contact-messages>
+<div id="main" ng-show="userModel.signedIn">
 
-<contact-details></contact-details>
+    <contact-messages></contact-messages>
+
+    <toolbar></toolbar>
+
+    <contact-search></contact-search>
+    <contact-list></contact-list>
+
+    <contact-details></contact-details>
+
+</div>
+
+<footer></footer>
 
 </body>
 </html>

@@ -6,8 +6,8 @@
         <button>Delete</button>
     </div>
     <form name="edit-details" novalidate ng-submit="edit-contact.$valid && save()">
-        <h1 ng-hide="editMode">{{ contactModel.selected.firstName }} <span class="bold">{{ contactModel.selected.lastName }}</span>
-            <span class="subtitle" ng-show="contactModel.selected.subtitle">{{ contactModel.selected.subtitle }}</span>
+        <h1 ng-hide="editMode">{{ contactModel.selected.getFirstName() }} <span class="bold">{{ contactModel.selected.getLastName() }}</span>
+            <span class="subtitle" ng-show="contactModel.selected.subtitle"></span>
         </h1>
 
         <div ng-show="editMode">
@@ -17,8 +17,15 @@
         </div>
         <div id="tabs" ng-controller="TabsController">
             <tabset>
+                <tab heading="{{getFirstTabLabel(contactModel.selected.getFirstName())}}"></tab>
                 <tab heading="Address">
-                    Address stuff
+                    <div class="address" ng-repeat="address in contactModel.selected.address">
+                        <label>{{ address.type }}</label>
+                        <br>
+                        <span ng-repeat="line in address.location">{{line}}<br></span>
+                        <iframe width="100%" height="300" frameborder="0" style="border:0"
+                                ng-src="{{getMapUrl(address.joined)}}"></iframe>
+                    </div>
                 </tab>
                 <tab heading="Notes">
                     Notes about this guy

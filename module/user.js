@@ -1,23 +1,19 @@
 (function () {
-    var app = angular.module("user", ['directive.g+signin']);
+    var app = angular.module("user", ['directive.g+signin', 'google']);
 
     app.directive("signIn", function () {
         return {
             restrict: "E",
             templateUrl: "template/signIn.html",
-            controller: ['$scope', '$http', 'UserModel', 'ContactModel', function ($scope, $http, userModel, contactModel) {
+            controller: ['$scope', '$http', 'UserModel', 'ContactModel', 'GoogleService', function ($scope, $http, userModel, contactModel, googleService) {
                 $scope.userModel = userModel;
 
                 $scope.$on('event:google-plus-signin-success', function (event, authResult) {
                     gapi.client.load('oauth2', 'v2', function () {
                         gapi.client.oauth2.userinfo.get().execute(function (obj) {
                             userModel.signIn(authResult, obj);
-                            gapi.client.request({
-                                path: "/m8/feeds/contacts/default/full?token_access="+userModel.auth.access_tokenId+"&alt=json&max-results=10000",
-                                method: "GET",
-                                callback: function (data) {
-                                    contactModel.loadData(data, $scope);
-                                }
+                            googleService.getAllContacts(userModel.auth.access_tokenId, function (data) {
+                                contactModel.processContacts(data, $scope);
                             });
                             $scope.$apply(function () {
                             });

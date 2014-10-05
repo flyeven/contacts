@@ -1,11 +1,8 @@
 <div id="list" ng-class="{bigView: !(contactModel.isAnySelected())}">
-    <form novalidate>
-        <input id="search" type="text" ng-model="userModel.searchTerm.$" placeholder="Search..."/>
-    </form>
     <div class="entry selectable"
-         ng-repeat="contact in filteredContacts = (contactModel.contacts | filter:userModel.searchTerm | orderBy:['lastName','firstName']:reverse)"
+         ng-repeat="contact in filteredContacts = (contactModel.contacts | filter:userModel.searchTerm)"
          ng-click="contactModel.select(contact.id)" ng-class="{selected: contactModel.isSelected(contact.id)}">
-        {{contact.firstName}} <span>{{contact.lastName}}</span>
+        {{contact.getFirstName()}} <span>{{contact.getLastName()}}</span>
     </div>
     <div class="entry" ng-hide="filteredContacts.length">
         No entries found.

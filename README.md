@@ -1,4 +1,4 @@
-angular-contacts
-================
+Contacts
+========
 
-Contacts app built to try Angular.js
+A beautiful and intuitive Frontend for Google Contacts.

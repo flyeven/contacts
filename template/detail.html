@@ -1,9 +1,23 @@
 <div id="page" ng-show="contactModel.isAnySelected()">
     <div id="toolbar" class="pull-right">
-        <button ng-hide="editMode" ng-click="startEdit(contactModel.selected)">Edit</button>
+        <!--<button ng-hide="editMode" ng-click="startEdit(contactModel.selected)">Edit</button>
         <button ng-show="editMode" ng-click="save()">Save</button>
         <button ng-show="editMode" ng-click="cancel()">Cancel</button>
-        <button>Delete</button>
+        <button>Delete</button>-->
+		
+		<div class="btn-group" dropdown>
+			<button type="button" class="btn btn-danger" ng-hide="editMode">Edit</button>
+			<button type="button" class="btn btn-danger" ng-show="editMode">Save</button>
+			<button type="button" class="btn btn-danger dropdown-toggle">
+				<span class="caret"></span>
+				<span class="sr-only">More Actions...</span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#" ng-show="editMode">Cancel</a></li>
+				<li><a href="#">Delete</a></li>
+			</ul>
+		</div>
+
     </div>
     <form name="edit-details" novalidate ng-submit="edit-contact.$valid && save()">
         <h1 ng-hide="editMode">{{ contactModel.selected.getFirstName() }} <span class="bold">{{ contactModel.selected.getLastName() }}</span>

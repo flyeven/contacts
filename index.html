@@ -1,26 +1,26 @@
 ﻿<!DOCTYPE html>
 <html ng-app="contacts">
 <head>
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="vendor/angular-ui/bootstrap/bootstrap.min.css"/>
     <link href='https://fonts.googleapis.com/css?family=Lato|Cardo&subset=latin,latin-ext' rel='stylesheet'
           type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 </head>
 <body ng-controller="AppController as app">
-<script type="text/javascript" src="lib/angular.min.js"></script>
-<script type="text/javascript" src="lib/ui-bootstrap-tpls-0.11.2.min.js"></script>
-<script type="text/javascript" src="lib/google-plus-signin.js"></script>
-<script type="text/javascript" src="dto/Contact.js"></script>
-<script type="text/javascript" src="module/google.js"></script>
-<script type="text/javascript" src="module/message.js"></script>
-<script type="text/javascript" src="module/contact.js"></script>
-<script type="text/javascript" src="module/search.js"></script>
-<script type="text/javascript" src="module/list.js"></script>
-<script type="text/javascript" src="module/detail.js"></script>
-<script type="text/javascript" src="module/user.js"></script>
-<script type="text/javascript" src="module/footer.js"></script>
-<script type="text/javascript" src="module/menu.js"></script>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="vendor/angular/angular.min.js"></script>
+<script type="text/javascript" src="vendor/angular-ui/bootstrap/ui-bootstrap-tpls-0.11.2.min.js"></script>
+<script type="text/javascript" src="vendor/sirkitree/angular-directive.g-signin/google-plus-signin.js"></script>
+<script type="text/javascript" src="app/dto/Contact.js"></script>
+<script type="text/javascript" src="app/google/google.js"></script>
+<script type="text/javascript" src="app/message/message.js"></script>
+<script type="text/javascript" src="app/model/contact.js"></script>
+<script type="text/javascript" src="app/search/search.js"></script>
+<script type="text/javascript" src="app/list/list.js"></script>
+<script type="text/javascript" src="app/detail/detail.js"></script>
+<script type="text/javascript" src="app/user/user.js"></script>
+<script type="text/javascript" src="app/footer/footer.js"></script>
+<script type="text/javascript" src="app/menu/menu.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
 
 <sign-in ng-hide="userModel.signedIn"></sign-in>
 

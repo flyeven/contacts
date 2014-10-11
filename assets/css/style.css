@@ -1,19 +1,16 @@
 body {
     background-color: #F2F2F2 !important;
-    /*background-image: url(https://github.com/TimoSta/Stud.IP-revised/raw/master/resources/background.png) !important;
-    background-repeat: repeat, no-repeat !important;*/
     background-image: url(../img/beach.png) !important;
     background-size: auto;
     background-repeat: no-repeat;
-    font-family: Lato, Arial !important;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     padding-left: 15px;
     padding-right: 15px;
     font-weight: 400;
 }
 
 h1 {
-    margin: 0px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
 }
 
 h1 span.bold {

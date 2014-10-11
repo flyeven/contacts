@@ -1,37 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccc2e004-8227-42b0-a0d6-5edcfab58797" name="Default" comment="Update Project Structure.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/.gitkeep" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\app.js" afterPath="$PROJECT_DIR$/app/app.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\css\style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\dto\Contact.js" afterPath="$PROJECT_DIR$/app/dto/Contact.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\img\beach.png" afterPath="$PROJECT_DIR$/assets/img/beach.png" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\img\dawn.png" afterPath="$PROJECT_DIR$/assets/img/dawn.png" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\img\grass.png" afterPath="$PROJECT_DIR$/assets/img/grass.png" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\img\street.png" afterPath="$PROJECT_DIR$/assets/img/street.png" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\lib\angular.min.js" afterPath="$PROJECT_DIR$/vendor/angular/angular.min.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\lib\bootstrap.min.css" afterPath="$PROJECT_DIR$/vendor/angular-ui/bootstrap/bootstrap.min.css" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\lib\google-plus-signin.js" afterPath="$PROJECT_DIR$/vendor/sirkitree/angular-directive.g-signin/google-plus-signin.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\lib\ui-bootstrap-tpls-0.11.2.min.js" afterPath="$PROJECT_DIR$/vendor/angular-ui/bootstrap/ui-bootstrap-tpls-0.11.2.min.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\contact.js" afterPath="$PROJECT_DIR$/app/model/contact.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\detail.js" afterPath="$PROJECT_DIR$/app/detail/detail.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\footer.js" afterPath="$PROJECT_DIR$/app/footer/footer.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\google.js" afterPath="$PROJECT_DIR$/app/google/google.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\list.js" afterPath="$PROJECT_DIR$/app/list/list.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\menu.js" afterPath="$PROJECT_DIR$/app/menu/menu.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\message.js" afterPath="$PROJECT_DIR$/app/message/message.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\search.js" afterPath="$PROJECT_DIR$/app/search/search.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\module\user.js" afterPath="$PROJECT_DIR$/app/user/user.js" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\template\add.html" afterPath="$PROJECT_DIR$/app/list/add.html" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\template\detail.html" afterPath="$PROJECT_DIR$/app/detail/detail.html" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\template\footer.html" afterPath="$PROJECT_DIR$/app/footer/footer.html" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\template\list.html" afterPath="$PROJECT_DIR$/app/list/list.html" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\template\menu.html" afterPath="$PROJECT_DIR$/app/menu/menu.html" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\template\messages.html" afterPath="$PROJECT_DIR$/app/message/messages.html" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\template\search.html" afterPath="$PROJECT_DIR$/app/search/search.html" />
-      <change type="MOVED" beforePath="C:\Users\Timo\WebstormProjects\contacts\template\signIn.html" afterPath="$PROJECT_DIR$/app/user/signIn.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    <list default="true" id="ccc2e004-8227-42b0-a0d6-5edcfab58797" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular-contacts.iws" />
@@ -58,8 +31,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="884">
-              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+            <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="884">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -111,8 +84,8 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55921054" vertical-offset="0" max-vertical-offset="5134">
-              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.035416666" vertical-offset="0" max-vertical-offset="5287">
+              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -164,9 +137,40 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="-1088" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Code style issuesCSS</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Invalid elementsCSS</id>
+          </State>
+          <State>
+            <id>Probable bugsCSS</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>HtmlUnknownAttribute</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -236,6 +240,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-contacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="contacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -251,8 +273,8 @@
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.idesettings.debugger.javascript" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="Errors" />
+    <property name="options.splitter.main.proportions" value="0.26" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
@@ -344,17 +366,22 @@
       <created>1413043189791</created>
       <updated>1413043189791</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update Project Structure.">
+      <created>1413044656109</created>
+      <updated>1413044656109</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-1088" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31578946" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -365,7 +392,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -741,14 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="884">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
@@ -784,10 +802,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.923077" vertical-offset="0" max-vertical-offset="884">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55921054" vertical-offset="0" max-vertical-offset="5134">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.035416666" vertical-offset="0" max-vertical-offset="5287">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding />
         </state>
       </provider>

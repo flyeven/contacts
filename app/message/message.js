@@ -14,7 +14,7 @@
     app.directive('contactMessages', function () {
         return{
             restrict: "E",
-            templateUrl: "template/messages.html",
+            templateUrl: "app/message/messages.html",
             controller: ['$scope', 'MessageService', function ($scope, messageService) {
                 $scope.alerts = messageService.messages;
 

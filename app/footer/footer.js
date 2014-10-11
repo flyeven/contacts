@@ -4,7 +4,7 @@
     app.directive("footer", function () {
         return {
             restrict: "E",
-            templateUrl: "template/footer.html"
+            templateUrl: "app/footer/footer.html"
         }
     })
 })();

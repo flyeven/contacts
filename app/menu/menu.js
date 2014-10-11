@@ -4,7 +4,7 @@
     app.directive("menubar", function () {
         return {
             restrict: "E",
-            templateUrl: "template/menu.html",
+            templateUrl: "app/menu/menu.html",
             controller: ['$scope', 'UserModel', function ($scope, userModel) {
                 $scope.userModel = userModel;
             }],

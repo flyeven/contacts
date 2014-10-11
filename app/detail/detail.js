@@ -4,7 +4,7 @@
     app.directive('contactDetails', function () {
         return {
             restrict: "E",
-            templateUrl: "template/detail.html",
+            templateUrl: "app/detail/detail.html",
             controller: ['$scope', '$sce', 'ContactModel', 'MessageService', function ($scope, $sce, contactModel, messageService) {
                 $scope.contactModel = contactModel;
                 $scope.editMode = false;

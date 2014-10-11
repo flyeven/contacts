@@ -4,7 +4,7 @@
     app.directive("signIn", function () {
         return {
             restrict: "E",
-            templateUrl: "template/signIn.html",
+            templateUrl: "app/user/signIn.html",
             controller: ['$scope', '$http', 'UserModel', 'ContactModel', 'GoogleService', function ($scope, $http, userModel, contactModel, googleService) {
                 $scope.userModel = userModel;
 

@@ -4,7 +4,7 @@
     app.directive("contactSearch", function () {
         return {
             restrict: "E",
-            templateUrl: "template/search.html",
+            templateUrl: "app/search/search.html",
             controller: ['$scope', 'ContactModel', function ($scope, contactModel) {
                 $scope.contactModel = contactModel;
             }],

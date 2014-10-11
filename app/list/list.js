@@ -4,7 +4,7 @@
     app.directive('contactList', function () {
         return {
             restrict: "E",
-            templateUrl: "template/list.html",
+            templateUrl: "app/list/list.html",
             controller: ['$scope', 'ContactModel', function ($scope, contactModel) {
                 $scope.contactModel = contactModel;
                 this.searchTerm = null;
@@ -16,7 +16,7 @@
     app.directive('addContact', function () {
         return {
             restrict: "E",
-            templateUrl: "template/add.html",
+            templateUrl: "app/list/add.html",
             controller: ['$scope', function ($scope) {
                 $scope.add = function() {
                     // TODO

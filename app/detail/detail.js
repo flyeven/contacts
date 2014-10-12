@@ -7,16 +7,19 @@
             templateUrl: "app/detail/detail.html",
             controller: ['$scope', '$sce', 'ContactModel', 'MessageService', function ($scope, $sce, contactModel, messageService) {
                 $scope.contactModel = contactModel;
-                $scope.editMode = false;
-                $scope.startEdit = function (contact) {
-                    $scope.editMode = true;
+                this.editMode = false;
+                this.startEdit = function (contact) {
+                    this.editMode = true;
                 };
-                $scope.save = function () {
-                    $scope.editMode = false;
-                    messageService.add('success', 'Contact saved.');
+                this.save = function () {
+                    this.editMode = false;
+                    messageService.add('success', 'Contact saved.', $scope);
                 };
-                $scope.cancel = function () {
-                    $scope.editMode = false;
+                this.cancel = function () {
+                    this.editMode = false;
+                };
+                this.del = function () {
+
                 };
 
 
@@ -28,7 +31,7 @@
                     return firstName != null && firstName.length > 0 ? firstName : "Details";
                 };
             }],
-            controllerAs: 'details'
+            controllerAs: 'vm'
         };
     });
 

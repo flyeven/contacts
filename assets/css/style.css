@@ -215,12 +215,61 @@ button.btn:hover {
 }
 
 #messages {
-    margin-bottom: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 300px;
 }
 
 #messages .alert {
-    padding: 5px;
-    margin-bottom: 5px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+#messages .alert.alert-success {
+    background: rgba(200,255,150,0.7);
+    color: #006400;
+}
+#messages .alert.alert-success:hover {
+    background: rgba(200,255,150,0.8);
+}
+#messages .alert.alert-warning {
+    background: rgba(255, 230, 99, 0.7);
+    color: #6D5008;
+}
+#messages .alert.alert-warning:hover {
+    background: rgba(255, 230, 99, 0.8);
+}
+#messages .alert.alert-info {
+    background: rgba(183, 212, 255, 0.7);
+    color: #001E96;
+}
+#messages .alert.alert-info:hover {
+    background: rgba(183, 212, 255, 0.8);
+}
+#messages .alert.alert-danger {
+    background: rgba(255, 171, 171, 0.7);
+    color: #8D0000;
+}
+#messages .alert.alert-danger:hover {
+    background: rgba(255, 171, 171, 0.8);
+}
+#messages .alert.ng-enter {
+    opacity: 0;
+}
+#messages .alert.ng-enter-active {
+    opacity: 1;
+}
+#messages .alert.ng-leave {
+    opacity: 1;
+}
+#messages .alert.ng-leave-active {
+    opacity: 0;
 }
 
 #messages .alert button.close {

@@ -1,5 +1,5 @@
 ﻿(function () {
-    var app = angular.module('contacts', ['ui.bootstrap', 'search', 'list', 'message', 'detail', 'user', 'footer', 'menu']);
+    var app = angular.module('contacts', ['ngAnimate', 'ui.bootstrap', 'search', 'list', 'message', 'detail', 'user', 'footer', 'menu']);
 
     app.controller('AppController', ['$window', '$scope', '$rootScope', 'UserModel', function ($window, $scope, $rootScope, userModel) {
         $scope.userModel = userModel;

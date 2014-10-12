@@ -1,30 +1,27 @@
 <div id="page" ng-show="contactModel.isAnySelected()">
     <div id="toolbar" class="pull-right">
-        <!--<button ng-hide="editMode" ng-click="startEdit(contactModel.selected)">Edit</button>
-        <button ng-show="editMode" ng-click="save()">Save</button>
-        <button ng-show="editMode" ng-click="cancel()">Cancel</button>
-        <button>Delete</button>-->
-		
-		<div class="btn-group" dropdown>
-			<button type="button" class="btn" ng-hide="editMode">Edit</button>
-			<button type="button" class="btn" ng-show="editMode">Save</button>
-			<button type="button" class="btn dropdown-toggle">
-				<span class="caret"></span>
-				<span class="sr-only">More Actions...</span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li><a href="#" ng-show="editMode">Cancel</a></li>
-				<li><a href="#">Delete</a></li>
-			</ul>
-		</div>
+        <div class="btn-group" dropdown>
+            <button type="button" class="btn" ng-hide="vm.editMode" ng-click="vm.startEdit(contactModel.selected)">
+                Edit
+            </button>
+            <button type="button" class="btn" ng-show="vm.editMode" ng-click="vm.save()">Save</button>
+            <button type="button" class="btn dropdown-toggle">
+                <span class="caret"></span>
+                <span class="sr-only">More Actions...</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#" ng-show="vm.editMode" ng-click="vm.cancel()">Cancel</a></li>
+                <li><a href="#" ng-click="vm.del()">Delete</a></li>
+            </ul>
+        </div>
 
     </div>
     <form name="edit-details" novalidate ng-submit="edit-contact.$valid && save()">
-        <h1 ng-hide="editMode">{{ contactModel.selected.getFirstName() }} <span class="bold">{{ contactModel.selected.getLastName() }}</span>
+        <h1 ng-hide="vm.editMode">{{ contactModel.selected.getFirstName() }} <span class="bold">{{ contactModel.selected.getLastName() }}</span>
             <span class="subtitle" ng-show="contactModel.selected.subtitle"></span>
         </h1>
 
-        <div ng-show="editMode">
+        <div ng-show="vm.editMode">
             <input id="form-firstName" placeholder="First Name" ng-model="contactModel.selected.firstName"/>
             <input id="form-lastName" placeholder="Last Name" ng-model="contactModel.selected.lastName"/>
             <input id="form-subtitle" placeholder="Subtitle" ng-model="contactModel.selected.subtitle"/>

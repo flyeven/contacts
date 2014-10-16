@@ -6,24 +6,39 @@
             restrict: "E",
             templateUrl: "app/detail/detail.html",
             controller: ['$scope', '$sce', 'ContactModel', 'MessageService', function ($scope, $sce, contactModel, messageService) {
+                var _this = this;
                 $scope.contactModel = contactModel;
                 this.editMode = false;
-                this.startEdit = function (contact) {
-                    this.editMode = true;
+                this.getEditButtonText = function () {
+                    return _this.editMode ? "Save" : "Edit";
                 };
-                this.save = function () {
-                    this.editMode = false;
-                    messageService.add('success', 'Contact saved.', $scope);
+                this.toggleEdit = function () {
+                    if (this.editMode) {
+                        return save();
+                    } else {
+                        return startEdit();
+                    }
+                };
+                var startEdit = function () {
+                    _this.editMode = true;
+                };
+                var save = function () {
+                    _this.editMode = false;
+                    console.log(messageService.success('Contact saved.', function () {
+                        alert("reverted!");
+                    }));
                 };
                 this.cancel = function () {
-                    this.editMode = false;
+                    _this.editMode = false;
                 };
                 this.del = function () {
-
+                    console.log(messageService.success('Contact deleted.', null, function () {
+                        alert("closed");
+                    }));
                 };
 
 
-                $scope.getMapUrl = function(address) {
+                $scope.getMapUrl = function (address) {
                     console.log($sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?q=" + address + "&key=AIzaSyCIeh8Kawd2K-rDDntpbn5YgW9375HYZe8"));
                     return $sce.trustAsResourceUrl("https://www.google.com/maps/embed/v1/place?q=" + address + "&key=AIzaSyCIeh8Kawd2K-rDDntpbn5YgW9375HYZe8");
                 };

@@ -3,33 +3,63 @@
 
     app.service('MessageService', ['$rootScope', function ($rootScope) {
         var _this = this;
-        this.messages = [];
+
+        var messages = [];
         var msgCount = 0;
-        this.add = function (type, msg, scope) {
-            var id = getId();
-            this.messages.push({id: id, type: type, msg: msg});
-           /* setTimeout(function () {
-                removeMessage(getIndexForId(id));
-                $rootScope.$apply();
-            }, 5000);*/
+
+        this.success = function (msg, revertCallback, closeCallback) {
+            return add('success', msg, revertCallback, closeCallback);
         };
-        this.close = function (id) {
-            removeMessage(id);
+        this.danger = function (msg, revertCallback, closeCallback) {
+            return add('danger', msg, revertCallback, closeCallback);
+        };
+        this.warning = function (msg, revertCallback, closeCallback) {
+            return add('warning', msg, revertCallback, closeCallback);
+        };
+        this.info = function (msg, revertCallback, closeCallback) {
+            return add('info', msg, revertCallback, closeCallback);
         };
 
-        var getId = function () {
+        this.close = function (id) {
+            var message = getMessage(id);
+            if (message != undefined) {
+                message.closeMessage();
+                messages.splice(getIndexForId(id), 1);
+            }
+        };
+
+        this.getMessages = function () {
+            return messages.slice().reverse();
+        };
+
+        var add = function (type, msg, revertCallback, closeCallback) {
+            var id = createId();
+            var message = new Message(id, type, msg, revertCallback, closeCallback);
+            messages.push(message);
+            setTimeout(function () {
+                $rootScope.$apply(_this.close(id));
+            }, 8000);
+            return id;
+        };
+
+        var createId = function () {
             return msgCount++;
         };
-        var getIndexForId = function (id) {
-            for (var i = 0; i < _this.messages.length; i++) {
-                if (_this.messages[i].id === id) {
-                    return i;
+        var getMessage = function (id) {
+            for (var i = 0; i < messages.length; i++) {
+                if (messages[i].id === id) {
+                    return messages[i];
                 }
             }
             return undefined;
         };
-        var removeMessage = function (id) {
-            _this.messages.splice(getIndexForId(id), 1);
+        var getIndexForId = function (id) {
+            for (var i = 0; i < messages.length; i++) {
+                if (messages[i].id === id) {
+                    return i;
+                }
+            }
+            return undefined;
         };
     }]);
 
@@ -38,13 +68,9 @@
             restrict: "E",
             templateUrl: "app/message/messages.html",
             controller: ['$scope', 'MessageService', function ($scope, messageService) {
-                $scope.alerts = messageService.messages;
-
-                $scope.closeAlert = function (id) {
-                    messageService.close(id);
-                };
+                $scope.messageService = messageService;
             }],
-            controllerAs: 'contact-messages'
+            controllerAs: 'vm'
         };
     });
 })();

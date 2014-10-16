@@ -1,10 +1,9 @@
 <div id="page" ng-show="contactModel.isAnySelected()">
     <div id="toolbar" class="pull-right">
         <div class="btn-group" dropdown>
-            <button type="button" class="btn" ng-hide="vm.editMode" ng-click="vm.startEdit(contactModel.selected)">
-                Edit
+            <button type="button" class="btn" ng-click="vm.toggleEdit()">
+                {{ vm.getEditButtonText() }}
             </button>
-            <button type="button" class="btn" ng-show="vm.editMode" ng-click="vm.save()">Save</button>
             <button type="button" class="btn dropdown-toggle">
                 <span class="caret"></span>
                 <span class="sr-only">More Actions...</span>
@@ -22,9 +21,7 @@
         </h1>
 
         <div ng-show="vm.editMode">
-            <input id="form-firstName" placeholder="First Name" ng-model="contactModel.selected.firstName"/>
-            <input id="form-lastName" placeholder="Last Name" ng-model="contactModel.selected.lastName"/>
-            <input id="form-subtitle" placeholder="Subtitle" ng-model="contactModel.selected.subtitle"/>
+            <input id="form-name" placeholder="Name" ng-model="contactModel.selected.name"/>
         </div>
         <div id="tabs" ng-controller="TabsController">
             <tabset>

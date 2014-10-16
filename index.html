@@ -12,6 +12,7 @@
 <script type="text/javascript" src="vendor/angular-ui/bootstrap/ui-bootstrap-tpls-0.11.2.min.js"></script>
 <script type="text/javascript" src="vendor/sirkitree/angular-directive.g-signin/google-plus-signin.js"></script>
 <script type="text/javascript" src="app/dto/Contact.js"></script>
+<script type="text/javascript" src="app/dto/Message.js"></script>
 <script type="text/javascript" src="app/google/google.js"></script>
 <script type="text/javascript" src="app/message/message.js"></script>
 <script type="text/javascript" src="app/model/contact.js"></script>
@@ -32,17 +33,14 @@
         <contact-list></contact-list>
         <add-contact></add-contact>
     </div>
+
     <div id="content">
-        <contact-messages></contact-messages>
-
         <toolbar></toolbar>
-
         <contact-details></contact-details>
-
     </div>
 </div>
 
-
+<contact-messages></contact-messages>
 
 </body>
 </html>

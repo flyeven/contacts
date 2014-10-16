@@ -1,5 +1,7 @@
 <div id="messages">
-    <alert class="animation" ng-repeat="alert in alerts.slice().reverse()" type="{{alert.type}}" ng-click="closeAlert(alert.id)" close="closeAlert(alert.id)" >
-        {{alert.msg}}
+    <alert class="animation" ng-repeat="message in messageService.getMessages()" type="{{message.type}}"
+           ng-click="messageService.close(message.id)" close="messageService.close(message.id)">
+        {{message.msg}}
+        <button ng-show="message.isRevertable" type="button" class="close" ng-click="message.revert()"><span aria-hidden="true">↺</span></button>
     </alert>
 </div>

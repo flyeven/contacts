@@ -1,6 +1,6 @@
 <div id="list" ng-class="{bigView: !(contactModel.isAnySelected())}">
     <div class="entry selectable"
-         ng-repeat="contact in filteredContacts = (contactModel.contacts | filter:userModel.searchTerm)"
+         ng-repeat="contact in filteredContacts = contactModel.getFilteredContacts()"
          ng-click="contactModel.select(contact.id)" ng-class="{selected: contactModel.isSelected(contact.id)}">
         {{contact.getFirstName()}} <span>{{contact.getLastName()}}</span>
     </div>

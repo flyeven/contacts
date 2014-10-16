@@ -5,10 +5,11 @@
         return {
             restrict: "E",
             templateUrl: "app/user/signIn.html",
-            controller: ['$scope', '$http', 'UserModel', 'ContactModel', 'GoogleService', function ($scope, $http, userModel, contactModel, googleService) {
+            controller: ['$scope', '$http', 'UserModel', 'ContactModel', 'GoogleService', 'MessageService', function ($scope, $http, userModel, contactModel, googleService, messageService) {
                 $scope.userModel = userModel;
 
                 $scope.$on('event:google-plus-signin-success', function (event, authResult) {
+                    $scope.$apply(messageService.info("Willkommen zurück, Timo!"));
                     gapi.client.load('oauth2', 'v2', function () {
                         gapi.client.oauth2.userinfo.get().execute(function (obj) {
                             userModel.signIn(authResult, obj);
@@ -22,7 +23,7 @@
                     });
                 });
                 $scope.$on('event:google-plus-signin-failure', function (event, authResult) {
-                    alert("Error");
+                    $scope.$apply(messageService.danger("Fehler beim Anmelden."));
                     //TODO
                 });
 

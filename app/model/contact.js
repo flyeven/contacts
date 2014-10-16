@@ -5,9 +5,20 @@
         var _this = this;
 
         this.contacts = [];
-        this.searchTerm = null;
+        this.filterTerm = null;
 
         this.selected = null;
+
+        this.getFilteredContacts = function () {
+            var filterTerm = getFilterTerm();
+            if (!!filterTerm) {
+                return _this.contacts.filter(function (element) {
+                    return element.name.toLowerCase().indexOf(filterTerm) != -1;
+                });
+            } else {
+                return _this.contacts;
+            }
+        };
 
         this.processContacts = function (data, refScope) {
             var entries = data.feed.entry;
@@ -67,12 +78,19 @@
                 });
             }
         };
+        var getFilterTerm = function () {
+            if (!!_this.filterTerm) {
+                return _this.filterTerm.toLowerCase();
+            } else {
+                return null;
+            }
+        };
         $rootScope.$on('event:next-contact', function () {
             console.log("eventHandler");
             var length = _this.contacts.length;
-            for(var i = 0; i < length; i++) {
-                if(_this.contacts[i] === _this.selected) {
-                    if(i < length - 1) {
+            for (var i = 0; i < length; i++) {
+                if (_this.contacts[i] === _this.selected) {
+                    if (i < length - 1) {
                         _this.selected = _this.contacts[i + 1];
                     }
                     break;

@@ -5,6 +5,9 @@ var Contact = function (id, name) {
     this.phone = [];
     this.address = [];
 
+    this.getName = function () {
+        return this.name;
+    };
     this.getFirstName = function () {
         var parts = splitName(this.name);
         if (parts.length > 1) {
